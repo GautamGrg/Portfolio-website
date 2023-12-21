@@ -75,13 +75,17 @@ body {
 }
 
 #home{
-  position: relative;
   background-color: aliceblue;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 50px;
+  justify-content: flex-start; 
+  margin: auto 0;
 }
+
+#profile{
+  background-color: aliceblue;
+}
+
 
 .section {
   height: 100vh;
@@ -115,8 +119,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start; 
-  max-width: 30vh;
-  max-height: 30vh;
+  max-width: 40vh;
+  max-height: 40vh;
   border-radius: 50%;
   object-fit: cover;
   margin-left: 10vw;
