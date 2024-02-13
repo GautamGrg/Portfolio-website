@@ -1,2 +1,2 @@
 # Portfolio-website
-Computer Science background Portfolio website with Django, HTML, CSS, JavaScript
+Portfolio website for IT personnel using Django, HTML, CSS, JavaScript
