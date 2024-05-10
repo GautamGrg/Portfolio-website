@@ -1,0 +1,264 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Gautam Gurung</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/bfbccc3348.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="{% static '/css/main.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+  <style>
+    .card {
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-text {
+      max-height: 3em;
+      /* Limit the maximum height to three lines of text */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .about-section {
+      padding: 10rem;
+      padding-bottom: 8rem;
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar justify-content-center">
+    <div class="navbar-links">
+      <a href="#master" class="scrollto"><i class="bx bx-home"></i><span>Home</span></a>
+      <a href="#about" class="scrollto"><i class="bx bx-user"></i>About</a>
+      <a href="#projects" class="scrollto"><i class="bx bx-server"></i>Projects</a>
+      <a href="#contact" class="scrollto"><i class="bx bx-envelope"></i>Contact </a>
+
+    </div>
+  </div>
+
+  <!-- Home section-->
+  <header id="master" class="home">
+    <div class="header-container">
+      <img src="{%static 'images\pfp-square.jpg' %}" class="profile-pic">
+      <h1 class="home-heading" style="font-family: Rubik;"> I'm Gautam Gurung👋</h1>
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star fa-spin"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <div class="container">
+        <p class="text-center" style="font-size: 35px;">I'm a <span class="typed"
+            data-typed-items="Software Engineer., Fullstack Developer., Cloud Architect., Software Engineer.">
+          </span></p>
+          
+      </div>
+      <div class="profile">
+        <div class="social-links mt-3 text-center">
+          <a href="https://www.linkedin.com/in/gautam-gurung-11b46b195/" class="linkedin" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/GautamGrg" class="github" title="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="www.linkedin.com/" class="CV" title="CV"><i class="bx bx-file-blank"></i></a>
+
+
+
+        </div>
+      </div>
+  </header>
+
+  <!-- About Section-->
+  <section id="about" class="about-section">
+    <div class="row">
+      <div class="col-md-3 text-right" >
+        <h1 class="text-lg font-weight-bold" style="font-family: Rubik; display: inline-block;">ABOUT<br />
+
+
+        <div style="text-align: center;">
+          <div style="display: inline-block; vertical-align: middle;">ME</div>
+        <!--
+          <div style="display: flex;">
+            <div style="margin: 20px -12px 20px 10px;">
+              <div style="
+                            width: 30px;
+                            border: 6px solid #06FBCE;
+                            margin: 0px 20px 0px 20px;"></div>
+              <div style="
+                            width: 70px;
+                            border: 6px solid #E5E7EB;
+                            margin: 0px 20px 0px 20px"></div>
+            </div>
+            
+          </div>
+        -->
+          <div style="display: inline-block; vertical-align: middle;">
+            <div>
+              <div style="
+                            width: 30px;
+                            border: 6px solid #06FBCE;
+                            margin: 0px 0px 0px 0px;"></div>
+              <div style="
+                            width: 70px;
+                            border: 6px solid #E5E7EB;
+                            margin: 0px 0px 0px 0px"></div>
+            </div>
+          </div>
+
+        </div>
+
+        </h1>
+      </div>
+      <div class="col-md-9">
+        <p> I am eager to contribute to the development of cutting-edge projects. Seeking a dynamic role
+          where I can apply my problem-solving skills and stay at the forfront of emerging technologies. My
+          expertise extends
+          across the SDLC, showcasing my commitment and ability at delivering high-quality solutions in
+          fast-paced enviroments.
+        </p>
+
+        <p> Additionally, my professional experience working in the technology industry has
+          equipped me with the skills necessary to adapt in any work enviroment. In technical sense,
+          I have gained a considerable amount of knowledge on component based development - working on
+          both the front and backend of development.
+        </p>
+        <h5 class="font-weight-bold">MY SKILLS:</h5>
+        <p>
+        <div class="row">
+          <div class="col-md-4">Html/css</div>
+          <div class="col-md-4">javascript</div>
+          <div class="col-md-4">typescript</div>
+        </div>
+        </p>
+        <p>
+        <div class="row">
+          <div class="col-md-4">reactjs</div>
+          <div class="col-md-4">nextjs</div>
+          <div class="col-md-4">gatsbyjs</div>
+        </div>
+        </p>
+        <p>
+        <div class="row">
+          <div class="col-md-4">redux</div>
+          <div class="col-md-4">firebase</div>
+          <div class="col-md-4">tawilwindcss</div>
+        </div>
+        </p>
+        <p>
+        <div class="row">
+          <div class="col-md-4">bootstrap</div>
+          <div class="col-md-4">figma</div>
+        </div>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="background-color:thistle;padding: 3.5rem;">
+    <div class="row justify-content-center my-4">
+      <h2 class="text-lg font-weight-bold" style="font-family: Rubik;">PROJECTS</h2>
+    </div>
+    <!-- <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="fas fa-star fa-spin"></i></div>
+      <div class="divider-custom-line"></div>
+    </div> -->
+    <div class="row" style="width: 80%;margin: 0 auto;">
+      {% for x in myProjects%}
+      <div class="col-md-4 my-2">
+        <a href="projects/{{ x.id }}" style="text-decoration: none; color: black;">
+          <div class="card shadow">
+            <div class="mx-2" width="100%" style="margin-top: 15px;">
+
+              <img src="{% static 'images/' %}{{ x.image }}" class="img-fluid" alt="">
+
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{x.name}}</h5>
+              <p class="card-text">{{x.description}}</p>
+              <div class="d-lg-flex">
+                <div class="mx-1 px-1 border text-center my-1" style="border-radius: 20px; color: #06FBCE;">
+                  {{x.language}}
+                </div>
+                <!-- <div class=" mx-1 px-1 border text-center my-1" style="border-radius: 20px;">
+                  {{x.language}}
+                </div>
+                <div class=" mx-1 px-1 border text-center my-1" style="border-radius: 20px;">
+                  {{x.language}}
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section id="contact" class="contact-container">
+    <div class="row justify-content-center">
+      <h1 class ="text-lg font-weight-bold" style="font-family: Rubik;">CONTACT</h1>
+    </div>
+    <!-- <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="fas fa-star fa-spin"></i></div>
+      <div class="divider-custom-line"></div>
+    </div> -->
+    <div>
+      <div style="text-align: left;">
+        <div class="contact-option">
+          <p>📞 Phone: 07727 920099 </p>
+        </div>
+        <div class="contact-option">
+          <p>✉ Email: g.autamgurung541@gmail.com</p>
+        </div>
+      </div>
+      <br><br>
+      <!-- <li><a href="#master" id="op"> Home</a></li> -->
+    </div>
+    <br><br>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/typed.js/typed.min.js' %}"></script>
+
+  <script src="{% static '/main.js' %}"></script>
+
+  <!--Boot Strap link-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

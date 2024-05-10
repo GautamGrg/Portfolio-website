@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ myProject.name }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="{% static '/css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="navbar justify-content-center">
+        <div class="navbar-links">
+            <a href="/#master" class="scrollto"><i class="bx bx-home"></i>Home</a>
+            <a href="/#about" class="scrollto"><i class="bx bx-user"></i>About</a>
+            <!-- <a href="#skills">Skills</a> -->
+            <a href="/#projects" class="scrollto"><i class="bx bx-server"></i>Projects</a>
+            <a href="/#contact" class="scrollto"><i class="bx bx-envelope"></i>Contact</a>
+        </div>
+    </div>
+    <section id="about" class="about-section">
+        <div class="d-flex justify-content-center">
+            <div class="card my-5  border" style="max-width: 1080px;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'images/' %}{{ myProject.image }}" class="img-fluid rounded-start" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ myProject.name }}</h5>
+                            <p class="card-text">{{ myProject.description }}</p>
+                            <p class="card-info">{{ myProject.language }}</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- <p style="text-align: center;">Back to <a href="/">Home</a></p> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
