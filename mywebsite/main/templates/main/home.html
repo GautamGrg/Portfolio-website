@@ -186,9 +186,9 @@
       <div class="col-md-4 my-2">
         <a href="projects/{{ x.id }}" style="text-decoration: none; color: black;">
           <div class="card shadow">
-            <div class="mx-2" width="100%" style="margin-top: 15px;">
+            <div class="mx-2" width="100%" style="margin-top: 15px;" >
 
-              <img src="{% static 'images/' %}{{ x.image }}" class="img-fluid" alt="">
+              <img src="{% static 'images/' %}{{ x.image }}" class="img-fluid" alt="" style="width: 100%; object-fit: cover !important;">
 
             </div>
             <div class="card-body">
