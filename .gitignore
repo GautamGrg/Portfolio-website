@@ -1,2 +1,5 @@
-
+# Ignore txt
 *.txt
+
+# Ignore env files
+.websiteVenv
