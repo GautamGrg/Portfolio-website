@@ -90,7 +90,7 @@
   <!-- About Section-->
   <section id="about" class="about-section">
     <div class="row">
-      <div class="col-md-3 text-right" >
+      <div class="col-md-3" >
         <h1 class="text-lg font-weight-bold" style="font-family: Rubik; display: inline-block;">ABOUT<br />
 
 
@@ -129,7 +129,7 @@
         </h1>
       </div>
       <!-- <div class="col-md-9" style="width: 60vh;"> -->
-      <div class="col-md-9" style="font-size: 18px;">
+      <div class="col-md-9" style="font-size: 20px;">
         <p> My name is Gautam Gurung. A driven Software Engineer eager to contribute in the development
             of cutting-edge projects like AI, Blockchain, VR, etc. I have previously worked across all
             stages of the SDLC, proving my commitment and ability in delivering high-quality solutions.
@@ -172,7 +172,7 @@
     </div>
   </section>
 
-  <section id="projects" style="background-color:thistle;padding: 3.5rem;">
+  <section id="projects" style="background-color:whitesmoke;padding: 3.5rem;">
     <div class="row justify-content-center my-4">
       <h2 class="text-lg font-weight-bold" style="font-family: Rubik;">PROJECTS</h2>
     </div>
@@ -181,7 +181,7 @@
       <div class="divider-custom-icon"><i class="fas fa-star fa-spin"></i></div>
       <div class="divider-custom-line"></div>
     </div> -->
-    <div class="row" style="width: 80%;margin: 0 auto;">
+    <div class="project-container">
       {% for x in myProjects%}
       <div class="col-md-4 my-2">
         <a href="projects/{{ x.id }}" style="text-decoration: none; color: black;">
