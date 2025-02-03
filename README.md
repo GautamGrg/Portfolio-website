@@ -1,2 +1,2 @@
 # Portfolio-website
-Portfolio website for IT personnel using Django, HTML, CSS, JavaScript
+Portfolio website example for a Software Engineer - built using Django.
