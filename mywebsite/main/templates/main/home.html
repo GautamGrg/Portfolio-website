@@ -104,8 +104,8 @@
       <div class="col-md-9" style="font-size: 20px;">
         <p> I am currently a Junior Software Engineer. My daily work consits of deploying code, ensuring such implementations are compatiable
         across all systems, working on system upgrades and bug patches. Working in a professional setting,
-        it has equipped me with the skills necessary to work effectively in cross-functional teams and experience
-        with agile enviroments; I have also gained a considerable amount of knowledge on component based development - 
+        it has equipped me with the skills necessary to work effectively in cross-functional teams and in
+        agile enviroments; I have also gained a considerable amount of knowledge on component based development - 
         working on both front-end and backend development.
         </p>
         <p> I also follow and keep-up-to date with the latest cutting-edge technologies like AI, Blockchain, IoT,
@@ -113,26 +113,25 @@
         the SDLC, proving my commitment and ability to delivering high-quality solutions, ensuring timely project
         delivery.
         </p>
-        <h5 class="font-weight-bold">MY SKILLS:</h5>
+        <h5 class="font-weight-bold" style="font-size: 1.5rem;">MY SKILLS:</h5>
         <p>
           <div class="row">
-            <div class="col-md-4">Python</div>
-            <div class="col-md-4">Java</div>
-            <div class="col-md-4">Rust</div>
+            <div class="col-md-4">Python <i class="fa-brands fa-python"></i></div>
+            <div class="col-md-4">Java <i class="fa-brands fa-js"></i></div>
+            <div class="col-md-4">Rust <i class="fa-brands fa-rust"></i></div>
           </div>
           </p>
           <p>
           <div class="row">
-            <div class="col-md-4">HTML/CSS</div>
-            <div class="col-md-4">JavaScript</div>
-            <div class="col-md-4">SQL</div>
+            <div class="col-md-4">JavaScript <i class="fa-brands fa-js"></i></div>
+            <div class="col-md-4">SQL <i class="fa-sharp fa-solid fa-database"></i></div>
+            <div class="col-md-4">Linux <i class="fa-brands fa-ubuntu"></i></div>
           </div>
           </p>
           <p>
           <div class="row">
-            <div class="col-md-4">Linux</div>
-            <div class="col-md-4">Firebase</div>
-            <div class="col-md-4">Tailwind CSS</div>
+            <div class="col-md-4">Docker <i class="fa-brands fa-docker"></i></div>
+            <div class="col-md-4">Ruby <i class="fa-solid fa-code"></i></div>
         </div>
         </p>
       </div>
@@ -169,31 +168,48 @@
     </div>
   </section>
   
-  <section id="contact" class="contact-container">
+  <section id="contact" class="contact-container fade-in">
     <div class="row justify-content-center">
-      <h1 class ="text-lg font-weight-bold" style="font-family: Rubik;">CONTACT</h1>
+      <h1 class="text-lg font-weight-bold" style="font-family: Rubik;">CONTACT</h1>
     </div>
     
     <div>
       <div style="text-align: center;">
         <div class="contact-option">
-          <p>📞 Phone: 08991123231 </p>
           <p>📍 Location: London, UK</p>
+          <p>✉ Email: gautamgurunggo@gmail.com</p>
         </div>
-        <div class="contact-email">
-          <p>✉ Email: myemail@gmail.com</p>
-          #TODO Add email form
+        <div class="contact-box">
+          <form method="POST" id="form">{% csrf_token %}
+            <input type="hidden" name="access_key" value="f3e8144d-c355-4f81-a03a-8104998c6240">
+            <input type="hidden" name="subject" value="New Submission from Web3Forms">
+            <input type="checkbox" name="botcheck" id="" style="display: none;">
+        
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Subject:</label>
+              <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        
+            <div id="result"></div>
+          </form>
         </div>
       </div>
-      <br><br>
     </div>
-    <br><br>
   </section>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <!-- Vendor JS Files -->
-  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
   <script src="{% static 'vendor/aos/aos.js' %}"></script>
   <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
   <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
