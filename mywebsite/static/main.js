@@ -5,7 +5,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -73,25 +73,9 @@
   }
 
   /**
-   * Back to top button
-   */
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
-      } else {
-        backtotop.classList.remove('active')
-      }
-    }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
-  }
-
-  /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('body').classList.toggle('mobile-nav-active')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -100,7 +84,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -150,7 +134,7 @@
     new Waypoint({
       element: skilsContent,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
@@ -171,9 +155,9 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -181,7 +165,7 @@
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        portfolioIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
@@ -260,3 +244,74 @@
   new PureCounter();
 
 })()
+
+  (function () {
+    "use strict";
+    /*
+     * Form Validation
+     */
+
+    // Fetch all the forms we want to apply custom validation styles to
+    const forms = document.querySelectorAll(".email-sender-form");
+    const result = document.getElementById("result");
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener(
+        "submit",
+        function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            form.querySelectorAll(":invalid")[0].focus();
+          } else {
+            /*
+             * Form Submission using fetch()
+             */
+            event.preventDefault();
+            event.stopPropagation();
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            result.innerHTML = "Please wait...";
+
+            fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: json,
+            })
+              .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                  result.innerHTML = json.message;
+                  result.classList.remove("text-gray-500");
+                  result.classList.add("text-green-500");
+                } else {
+                  console.log(response);
+                  result.innerHTML = json.message;
+                  result.classList.remove("text-gray-500");
+                  result.classList.add("text-red-500");
+                }
+              })
+              .catch((error) => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+              })
+              .then(function () {
+                form.reset();
+                form.classList.remove("was-validated");
+                setTimeout(() => {
+                  result.style.display = "none";
+                }, 5000);
+              });
+          }
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    });
+  })();

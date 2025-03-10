@@ -80,7 +80,7 @@ h6 {
   line-height: 2.75rem;
   animation: fadeIn 1s ease forwards;
   margin-bottom: 0.9rem;
-  
+
 }
 
 .divider-custom {
@@ -143,7 +143,7 @@ h6 {
   justify-content: center;
 }
 
-.about-section .col-md-3{
+.about-section .col-md-3 {
   text-align: right !important;
 }
 
@@ -155,25 +155,25 @@ h6 {
   }
 }
 
-.about-section .col-md-9{
+.about-section .col-md-9 {
   max-width: 800px;
 }
 
-.col-md-9 p{
+.col-md-9 p {
   margin-bottom: 1.5rem;
 }
 
-.col-md-9 .row{
+.col-md-9 .row {
   opacity: 0;
   animation: fadeIn 1s ease forwards;
 }
 
 
 @media (min-width: 768px) {
-  .col-md-4{
-    max-width: 50% ;
+  .col-md-4 {
+    max-width: 50%;
   }
-  
+
 }
 
 .card {
@@ -192,8 +192,8 @@ h6 {
   white-space: nowrap;
 }
 
-.shadow{
-  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.5) !important;
+.shadow {
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .5) !important;
 }
 
 
@@ -224,7 +224,7 @@ p {
   color: #fff;
 }
 
-#projects h2{
+#projects h2 {
   font-size: 2.5rem;
 }
 
@@ -299,7 +299,8 @@ p {
   margin-bottom: 5px;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
