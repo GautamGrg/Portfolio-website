@@ -4,5 +4,6 @@
 # Ignore env files
 .websiteVenv
 *.pyc
-/staticfiles/
 
+# ignore config collection during deployment
+/staticfiles/
